@@ -55,10 +55,20 @@
     <value>C:\tmp\hadoop-cnauroth\dfs\journalnode</value>
   </property>
 
-   <property>
-     <name>dfs.ha.automatic-failover.enabled</name>
-     <value>true</value>
-   </property>
+  <property>
+    <name>dfs.ha.log-roll.period</name>
+    <value>20</value>
+  </property>
+
+  <property>
+    <name>dfs.ha.tail-edits.period</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>dfs.ha.automatic-failover.enabled</name>
+    <value>true</value>
+  </property>
 
   <property>
     <name>ha.zookeeper.quorum</name>
