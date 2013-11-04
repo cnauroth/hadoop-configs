@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+    <name>dfs.nameservices</name>
+    <value>mycluster</value>
+  </property>
+
+  <property>
+    <name>dfs.ha.namenodes.mycluster</name>
+    <value>nn1,nn2</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.rpc-address.mycluster.nn1</name>
+    <value>cnauroth-vm-2:8020</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.rpc-address.mycluster.nn2</name>
+    <value>cnauroth-vm-3:8020</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.http-address.mycluster.nn1</name>
+    <value>cnauroth-vm-2:50070</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.http-address.mycluster.nn2</name>
+    <value>cnauroth-vm-3:50070</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.shared.edits.dir</name>
+    <value>qjournal://cnauroth-vm-4:8485;cnauroth-vm-5:8485;cnauroth-vm-6:8485/mycluster</value>
+  </property>
+
+  <property>
+    <name>dfs.client.failover.proxy.provider.mycluster</name>
+    <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+  </property>
+
+  <property>
+    <name>dfs.ha.fencing.methods</name>
+    <value>shell(@exit 0)</value>
+  </property>
+
+  <property>
+    <name>dfs.journalnode.edits.dir</name>
+    <value>C:\tmp\hadoop-cnauroth\dfs\journalnode</value>
+  </property>
+
+   <property>
+     <name>dfs.ha.automatic-failover.enabled</name>
+     <value>true</value>
+   </property>
+
+  <property>
+    <name>ha.zookeeper.quorum</name>
+    <value>cnauroth-vm-4:2181,cnauroth-vm-5:2181,cnauroth-vm-6:2181</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:/C:/tmp/hadoop-${user.name}/dfs/name</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.safemode.extension</name>
+    <value>0</value>
+  </property>
+
+</configuration>
