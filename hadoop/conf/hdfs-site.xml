@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+  <property>
+    <name>dfs.client.read.shortcircuit</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>dfs.domain.socket.path</name>
+    <value>/var/lib/hadoop-cnauroth/dn_socket</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.caching.enabled</name>
+    <value>true</value>
+  </property>
+
+  <!-- DataNode process ulimit for locked memory must be >= to this -->
+  <property>
+    <name>dfs.datanode.max.locked.memory</name>
+    <value>268435456</value>
+  </property>
+
+  <!-- This is tuned artificially low to help test the scans that occur -->
+  <property>
+    <name>dfs.namenode.path.based.cache.refresh.interval.ms</name>
+    <value>15000</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.safemode.extension</name>
+    <value>0</value>
+  </property>
+
+</configuration>
