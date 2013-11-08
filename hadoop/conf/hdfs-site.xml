@@ -31,6 +31,11 @@
   </property>
 
   <property>
+    <name>dfs.time.between.resending.caching.directives.ms</name>
+    <value>15000</value>
+  </property>
+
+  <property>
     <name>dfs.namenode.safemode.extension</name>
     <value>0</value>
   </property>
